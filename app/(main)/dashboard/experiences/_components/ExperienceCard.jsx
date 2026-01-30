@@ -1,10 +1,19 @@
 import { Button } from '@/components/ui/button'
 import moment from 'moment'
 import React from 'react'
+import { useRouter } from "next/navigation";
 
 function ExperienceCard({experience}) {
+  const router = useRouter();
+
+  const handleClick = () => {
+    {router.push(`./experiences/${experience.unique_id}` );
+          router.refresh();
+    }
+  };
+  
   return (
-    <div className='p-6 bg-white rounded-lg border'>
+    <div className='p-6 bg-white rounded-lg border hover:shadow-md cursor-pointer transition-all duration-150' onClick={handleClick}>
       <div className='flex justify-between items-center'>
         <div>
             <h2 className='font-bold text-lg'>{experience?.company} | <span className='font-semibold text-sm'>{experience?.jobRole}</span></h2>
@@ -26,7 +35,12 @@ function ExperienceCard({experience}) {
             <h3 className='text-xs text-gray-500'>{experience?.name}</h3>
             <h2 className='text-xs text-gray-500'>{moment(experience?.created_at).format('DD MMM yyy')}</h2>
         </div>
-        <Button variant="outline">View details</Button>
+        <Button variant="outline"
+         onClick={() => {router.push(`./experiences/${experience.unique_id}` );
+          router.refresh();
+        }}
+        > View details
+        </Button>
       </div>
 
       
