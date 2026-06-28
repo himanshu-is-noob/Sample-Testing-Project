@@ -1,5 +1,4 @@
 import { Geist, Geist_Mono, Open_Sans } from "next/font/google";
-import { Open_Sans } from "next/font/google";
 
 import "./globals.css";
 import Provider from "./provider";
