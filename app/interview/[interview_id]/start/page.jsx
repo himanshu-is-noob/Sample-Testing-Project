@@ -71,12 +71,14 @@ function StartInterview() {
           language:"en-US",
         },
         voice:{
-          provider:"playht",
-          voiceId:"jennifer",
+          // provider:"playht",
+          // voiceId:"jennifer",
+          voiceId: "Elliot",
+          provider: "vapi"
         },
         model:{
           provider:"openai",
-          model:"gpt-4",
+          model:"gpt-4o",
           messages : [
             {
               role:"system",

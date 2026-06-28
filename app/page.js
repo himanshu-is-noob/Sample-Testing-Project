@@ -4,6 +4,7 @@ import Header from "./_components/Header";
 import Hero from "./_components/Hero";
 import InfiniteMovingCardDemo from './_components/InfiniteImage'
 import {SparklesPreview} from './_components/SparkleEffect'
+import Options from "./_components/Options"
 
 
 export default function Home() {
@@ -19,10 +20,14 @@ export default function Home() {
         
       </section>
 
-      {/* Scrolling Testimonials */}
-      <section className="w-full  flex justify-center items-center">
-        <InfiniteMovingCardDemo />
+      <section>
+        <Options/>
       </section>
+
+      {/* Scrolling Testimonials */}
+      {/* <section className="w-full  flex justify-center items-center">
+        <InfiniteMovingCardDemo />
+      </section> */}
 
     </main>
   );
